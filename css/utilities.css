@@ -1,0 +1,309 @@
+:root {
+  --background-main: rgb(19, 108, 217);
+  --background-secondary: rgb(231, 231, 231);
+  --background--main-container: rgb(241, 239, 239);
+
+  --text-primary: rgb(255, 255, 255);
+  --text-secondary: rgb(96, 96, 96);
+  --text-social: rgb(255, 255, 255, 0.8);
+  --text-ta-h2: rgb(231, 108, 7);
+
+  --ta-border: rgb(209, 207, 207);
+}
+
+* {
+  font-family: "Abhaya Libre", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.cu-main {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  background: var(--background--main-container);
+  padding-bottom: 2rem;
+}
+
+.filler {
+  padding-top: 70px;
+}
+
+/* ==========
+    Buttons
+   ========== */
+
+/* Takeway html order button */
+
+/* Button styling for mobile version */
+
+.card-btn {
+  display: block;
+  /* width: fit-content; */
+  padding: 0.5em 0em;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  background: var(--background-main);
+  /* border-radius: 10px; */
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* Nav bar for Mobile version */
+
+.navbar {
+  background: var(--background-main);
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 8px var(--text-secondary);
+  z-index: 2;
+}
+
+.navbar .container {
+  position: relative;
+  display: flex;
+}
+
+.navbar .logo {
+  position: relative;
+  color: var(--text-primary);
+  top: 10px;
+  left: 30px;
+  transition: all 0.3s ease-in;
+}
+
+.navbar .logo i {
+  transition: all 0.2s ease-in;
+}
+
+.navbar .logo i:hover {
+  transform: rotate(180deg);
+  color: var(--background-main);
+}
+
+.navbar .toggler {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.navbar .hamburger-menu {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.navbar .hamburger-menu > div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar .hamburger-menu > div:before,
+.navbar .hamburger-menu > div:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+}
+
+.navbar .hamburger-menu > div:after {
+  top: 10px;
+}
+
+.navbar .nav-overlay {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  visibility: hidden;
+  transition: all 0.1s ease-in;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-overlay ul {
+  padding-left: 1rem;
+  display: flex;
+}
+
+.navbar .nav-overlay li:first-child {
+  position: relative;
+  top: -100px;
+  transition: all 0.3s ease-in;
+}
+
+.navbar .nav-overlay li:nth-child(2) {
+  position: relative;
+  top: -100px;
+  transition: all 0.4s ease-in;
+}
+
+.navbar .nav-overlay li:last-child {
+  position: relative;
+  top: -100px;
+  transition: all 0.5s ease-in;
+}
+
+.navbar .nav-overlay a {
+  padding: 1em;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.2s ease-in;
+}
+
+.navbar .nav-overlay a:hover {
+  color: rgb(19, 188, 297);
+}
+
+.navbar .nav-overlay .current {
+  font-weight: 800;
+  padding: 0.6em;
+  border-radius: 5px;
+  background: rgb(19, 128, 217);
+}
+
+.navbar .nav-overlay .current:hover {
+  color: var(--text-primary);
+}
+
+.navbar .toggler:checked ~ .nav-overlay {
+  visibility: visible;
+  top: 0;
+}
+
+.navbar .toggler:checked ~ .nav-overlay li:first-child,
+.navbar .toggler:checked ~ .nav-overlay li:nth-child(2),
+.navbar .toggler:checked ~ .nav-overlay li:last-child {
+  top: 0;
+}
+
+.navbar .toggler:checked ~ .logo {
+  left: -250px;
+}
+.navbar .toggler:checked ~ .hamburger-menu > div:before,
+.navbar .toggler:checked ~ .hamburger-menu > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.navbar .toggler:checked ~ .hamburger-menu > div {
+  transform: rotate(135deg);
+  width: 50%;
+}
+
+.navbar .toggler:checked:hover ~ .hamburger-menu > div {
+  width: 60%;
+}
+
+/* Large navbar will show only on large screens */
+
+.navbar .large-navbar {
+  display: none;
+}
+
+/* Media Query */
+
+@media (min-width: 670px) {
+  .navbar .hamburger-menu,
+  .navbar .toggler {
+    display: none;
+  }
+
+  .navbar .container {
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .logo {
+    top: 0;
+    left: 0;
+  }
+
+  .navbar .large-navbar {
+    display: flex;
+  }
+
+  .navbar .large-navbar ul {
+    display: flex;
+  }
+
+  .navbar a {
+    padding: 0 1em;
+    transition: all 0.2s ease-in;
+  }
+
+  .navbar a:hover {
+    color: rgb(19, 188, 297);
+  }
+
+  .navbar .current {
+    font-weight: 800;
+    padding: 0.6em;
+    border-radius: 5px;
+    background: rgb(19, 118, 217);
+  }
+
+  .navbar .current:hover {
+    color: var(--text-primary);
+  }
+}
