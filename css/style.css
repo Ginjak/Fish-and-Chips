@@ -74,6 +74,7 @@ main .main-p {
   padding: 0.5em 0;
   text-align: center;
   color: var(--text-secondary);
+  Color: red;
 }
 
 .ta-main h2 {
