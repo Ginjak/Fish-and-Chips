@@ -74,7 +74,6 @@ main .main-p {
   padding: 0.5em 0;
   text-align: center;
   color: var(--text-secondary);
-  Color: red;
 }
 
 .ta-main h2 {
@@ -92,6 +91,7 @@ main .main-p {
 
 .ta-main ul {
   border-bottom: 1px solid var(--ta-border);
+  
 }
 
 .ta-main ul:last-child {
@@ -122,7 +122,7 @@ main .main-p {
   justify-content: space-between;
   flex-grow: 1;
   font-size: 1.2rem;
-  padding: 0.2em 3em;
+  padding: 0.2em 1em;
 }
 
 .ta-main .card-btn {
@@ -164,6 +164,7 @@ main .main-p {
 
 .ta-main ul:focus li {
   display: block;
+  outline: none;
 }
 
 /* Contact us main section */
