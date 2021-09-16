@@ -591,7 +591,8 @@ footer > div {
 
   .form-container form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     column-gap: 1rem;
     background: rgb(241, 239, 239, 0.6);
     border: none;
