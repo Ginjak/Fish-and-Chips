@@ -315,7 +315,7 @@ main .main-p {
   font-size: 1rem;
   color: rgb(19, 108, 217, 0.6);
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   padding: 0.5em;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -605,6 +605,7 @@ footer > div {
 
   .form-container form label:nth-child(5) {
     grid-column: 1 / span 2;
+    margin-bottom: 25px;
   }
 
   .form-container button {
