@@ -644,16 +644,13 @@ footer > div {
     padding: 1rem 1rem;
   }
 
-  .form-container label:nth-child(3) {
-    grid-column: 3 / 4;
-  }
-
-  .form-container label:nth-child(4) {
-    grid-column: 1 / 4;
+  .form-container form label:nth-child(5) {
+    grid-column: 1 / span 3;
+    margin-bottom: 25px;
   }
 
   .form-container button {
-    grid-column: span 3 / 4;
+    grid-column: span 1 / 3;
     margin: 0;
   }
 
