@@ -600,7 +600,7 @@ footer > div {
   }
 
   .form-container label:nth-child(2) {
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 4;
   }
 
   .form-container label:nth-child(3) {
