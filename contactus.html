@@ -49,11 +49,33 @@
 <div class="cu-main">
   <h1>Contact Us</h1>
 <div class="form-container">
-  <form action="#">
+  <form name="contact" method="POST" data-netlify="true">
     
-    <input type="text" name="firstname" placeholder="Your first name">
-    <input type="text" name="lastname" placeholder="Your last name">
-    <textarea name="message" cols="30" rows="10" placeholder="Your message"></textarea>
+
+    <label for="name" class="custom-field">
+    <input type="text" required id="name" name="Firstname">
+    <span class="placeholder">Name</span>
+    <span class="border"></span>
+  </label>
+
+    <label for="lastname" class="custom-field">
+      <input type="text" required id="lastname" name="Lastname">
+      <span class="placeholder">Last Name</span>
+      <span class="border"></span></label>
+
+      <label for="email" class="custom-field">
+        <input type="text" required id="email" name="Email">
+        <span class="placeholder">Email Address</span>
+        <span class="border"></span></label>
+        
+        
+        <label class="custom-field">
+          <textarea name="Message" rows="3" cols="10" mixlenght="1" maxlength="40" required></textarea>
+          <span class="placeholder">Message</span>
+          <span class="border"></span>
+        </label>
+      
+    
     <button>Submit</button>
   </form>
   </div>
