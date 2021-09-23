@@ -91,6 +91,7 @@ main .main-p {
 
 .ta-main ul {
   border-bottom: 1px solid var(--ta-border);
+  outline: none;
 }
 
 .ta-main ul:last-child {
